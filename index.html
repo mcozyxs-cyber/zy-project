@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CvSU Naic Intramurals Players Profile</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial,sans-serif;
+}
+
+body{background:#f4f4f4;}
+
+header{
+    background:green;
+    color:white;
+    text-align:center;
+    padding:20px;
+}
+
+nav{
+    background:#004d00;
+    text-align:center;
+    padding:10px;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.container{
+    width:90%;
+    margin:auto;
+    padding:20px;
+}
+
+.course-section{margin-bottom:30px;}
+
+.course-title{
+    background:green;
+    color:white;
+    padding:12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.sports-container{
+    display:none;
+    margin-top:10px;
+}
+
+.sport-btn{
+    background:#006400;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    margin:5px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.players{
+    display:none;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:15px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 5px rgba(0,0,0,0.2);
+}
+
+.card img{
+    width:120px;
+    height:120px;
+    border-radius:50%;
+}
+
+.card h3{color:green;}
+
+footer{
+    background:#004d00;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <img src="cvsu-logo.png.png" alt="CvSU Logo" class="logo">
+    <h1>CvSU Naic Intramurals 2026</h1>
+    <p>Players Profile System</p>
+</header>
+
+<nav>
+    <a href="#bsit">BSIT</a>
+    <a href="#bshm">BSHM</a>
+    <a href="#bsed">BSEd</a>
+    <a href="#bscs">BSCS</a>
+    <a href="#fisheries">BSFAS</a>
+</nav>
+
+<div class="container">
+
+<!-- ================= BSIT ================= -->
+<section id="bsit" class="course-section">
+    <h2 class="course-title" onclick="showSports('bsitSports')">BSIT</h2>
+
+    <div id="bsitSports" class="sports-container">
+        <button class="sport-btn" onclick="showPlayers('bsitBasketball','bsit','basketball')">Basketball</button>
+        <button class="sport-btn" onclick="showPlayers('bsitVolleyball','bsit','volleyball')">Volleyball</button>
+        <button class="sport-btn" onclick="showPlayers('bsitTableTennis','bsit','tabletennis')">Table Tennis</button>
+        <button class="sport-btn" onclick="showPlayers('bsitMLBB','bsit','mlbb')">MLBB</button>
+    </div>
+
+    <div id="bsitBasketball" class="players"></div>
+    <div id="bsitVolleyball" class="players"></div>
+    <div id="bsitTableTennis" class="players"></div>
+    <div id="bsitMLBB" class="players"></div>
+</section>
+
+<!-- ================= BSHM ================= -->
+<section id="bshm" class="course-section">
+    <h2 class="course-title" onclick="showSports('bshmSports')">BSHM</h2>
+
+    <div id="bshmSports" class="sports-container">
+        <button class="sport-btn" onclick="showPlayers('bshmBasketball','bshm','basketball')">Basketball</button>
+        <button class="sport-btn" onclick="showPlayers('bshmVolleyball','bshm','volleyball')">Volleyball</button>
+        <button class="sport-btn" onclick="showPlayers('bshmTableTennis','bshm','tabletennis')">Table Tennis</button>
+        <button class="sport-btn" onclick="showPlayers('bshmMLBB','bshm','mlbb')">MLBB</button>
+    </div>
+
+    <div id="bshmBasketball" class="players"></div>
+    <div id="bshmVolleyball" class="players"></div>
+    <div id="bshmTableTennis" class="players"></div>
+    <div id="bshmMLBB" class="players"></div>
+</section>
+
+<!-- ================= BSED ================= -->
+<section id="bsed" class="course-section">
+    <h2 class="course-title" onclick="showSports('bsedSports')">BSEd</h2>
+
+    <div id="bsedSports" class="sports-container">
+        <button class="sport-btn" onclick="showPlayers('bsedBasketball','bsed','basketball')">Basketball</button>
+        <button class="sport-btn" onclick="showPlayers('bsedVolleyball','bsed','volleyball')">Volleyball</button>
+        <button class="sport-btn" onclick="showPlayers('bsedTableTennis','bsed','tabletennis')">Table Tennis</button>
+        <button class="sport-btn" onclick="showPlayers('bsedMLBB','bsed','mlbb')">MLBB</button>
+    </div>
+
+    <div id="bsedBasketball" class="players"></div>
+    <div id="bsedVolleyball" class="players"></div>
+    <div id="bsedTableTennis" class="players"></div>
+    <div id="bsedMLBB" class="players"></div>
+</section>
+
+<!-- ================= BSCS ================= -->
+<section id="bscs" class="course-section">
+    <h2 class="course-title" onclick="showSports('bscsSports')">BSCS</h2>
+
+    <div id="bscsSports" class="sports-container">
+        <button class="sport-btn" onclick="showPlayers('bscsBasketball','bscs','basketball')">Basketball</button>
+        <button class="sport-btn" onclick="showPlayers('bscsVolleyball','bscs','volleyball')">Volleyball</button>
+        <button class="sport-btn" onclick="showPlayers('bscsTableTennis','bscs','tabletennis')">Table Tennis</button>
+        <button class="sport-btn" onclick="showPlayers('bscsMLBB','bscs','mlbb')">MLBB</button>
+    </div>
+
+    <div id="bscsBasketball" class="players"></div>
+    <div id="bscsVolleyball" class="players"></div>
+    <div id="bscsTableTennis" class="players"></div>
+    <div id="bscsMLBB" class="players"></div>
+</section>
+
+<!-- ================= BSFAS ================= -->
+<section id="fisheries" class="course-section">
+    <h2 class="course-title" onclick="showSports('fisheriesSports')">BSFAS</h2>
+
+    <div id="fisheriesSports" class="sports-container">
+        <button class="sport-btn" onclick="showPlayers('fisheriesBasketball','fisheries','basketball')">Basketball</button>
+        <button class="sport-btn" onclick="showPlayers('fisheriesVolleyball','fisheries','volleyball')">Volleyball</button>
+        <button class="sport-btn" onclick="showPlayers('fisheriesTableTennis','fisheries','tabletennis')">Table Tennis</button>
+        <button class="sport-btn" onclick="showPlayers('fisheriesMLBB','fisheries','mlbb')">MLBB</button>
+    </div>
+
+    <div id="fisheriesBasketball" class="players"></div>
+    <div id="fisheriesVolleyball" class="players"></div>
+    <div id="fisheriesTableTennis" class="players"></div>
+    <div id="fisheriesMLBB" class="players"></div>
+</section>
+
+</div>
+
+<footer>
+    <p>CvSU Naic Intramurals Players Profile System</p>
+</footer>
+
+<script>
+const players = {
+bsit: {
+    basketball:["Zy Macalinao","Jomar Distopr","Glen Adauna","Mark Anthony Fernandez","Carlo Paalam,","Lebron James Batumbakal","Jisun Titum,","Justin Nabunturan","Tyga Kagami","Kurokonobasket Reyes"],
+    volleyball:["Sofia Pablo","Mikha Lim","Dana White","Jane Patikol","Hershey Kisses","Mikaela Jordan","Queen James","Shai Alexandra","Onanay","Fracheska Queenie"],
+    tabletennis:["Ian Cruz","Anthony Gordon"],
+    mlbb:["KArltzy","flpatzy","ChingBa","Yasssi0","Aze","Magma"]
+},
+bshm: {
+    basketball:["Zy Macalinao","Jomar Distopr","Glen Adauna","Mark Anthony Fernandez","Carlo Paalam,","Lebron James Batumbakal","Jisun Titum,","Justin Nabunturan","Tyga Kagami","Kurokonobasket Reyes"],
+    volleyball:["Sofia Pablo","Mikha Lim","Dana White","Jane Patikol","Hershey Kisses","Mikaela Jordan","Queen James","Shai Alexandra","Onanay","Fracheska Queenie"],
+    tabletennis:["Ian Cruz","Anthony Gordon"],
+    mlbb:["KArltzy","flpatzy","ChingBa","Yasssi0","Aze","Magma"]
+},
+bsed: {
+   basketball:["Zy Macalinao","Jomar Distopr","Glen Adauna","Mark Anthony Fernandez","Carlo Paalam,","Lebron James Batumbakal","Jisun Titum,","Justin Nabunturan","Tyga Kagami","Kurokonobasket Reyes"],
+    volleyball:["Sofia Pablo","Mikha Lim","Dana White","Jane Patikol","Hershey Kisses","Mikaela Jordan","Queen James","Shai Alexandra","Onanay","Fracheska Queenie"],
+    tabletennis:["Ian Cruz","Anthony Gordon"],
+    mlbb:["KArltzy","flpatzy","ChingBa","Yasssi0","Aze","Magma"]
+},
+bscs: {
+   basketball:["Zy Macalinao","Jomar Distopr","Glen Adauna","Mark Anthony Fernandez","Carlo Paalam,","Lebron James Batumbakal","Jisun Titum,","Justin Nabunturan","Tyga Kagami","Kurokonobasket Reyes"],
+    volleyball:["Sofia Pablo","Mikha Lim","Dana White","Jane Patikol","Hershey Kisses","Mikaela Jordan","Queen James","Shai Alexandra","Onanay","Fracheska Queenie"],
+    tabletennis:["Ian Cruz","Anthony Gordon"],
+    mlbb:["KArltzy","flpatzy","ChingBa","Yasssi0","Aze","Magma"]
+},
+fisheries: {
+   basketball:["Zy Macalinao","Jomar Distopr","Glen Adauna","Mark Anthony Fernandez","Carlo Paalam,","Lebron James Batumbakal","Jisun Titum,","Justin Nabunturan","Tyga Kagami","Kurokonobasket Reyes"],
+    volleyball:["Sofia Pablo","Mikha Lim","Dana White","Jane Patikol","Hershey Kisses","Mikaela Jordan","Queen James","Shai Alexandra","Onanay","Fracheska Queenie"],
+    tabletennis:["Ian Cruz","Anthony Gordon"],
+    mlbb:["KArltzy","flpatzy","ChingBa","Yasssi0","Aze","Magma"]
+}
+};
+function showSports(id){
+    let section=document.getElementById(id);
+    section.style.display = section.style.display==="block" ? "none" : "block";
+}
+function showPlayers(containerId, course, sport){
+
+    document.querySelectorAll('.players').forEach(d=>{
+        d.style.display='none';
+    });
+
+    let container=document.getElementById(containerId);
+    container.innerHTML="";
+
+    let list = players[course][sport];
+
+    for(let i=0;i<10;i++){
+        container.innerHTML += `
+        <div class="card">
+            <img src="https://via.placeholder.com/120">
+            <h3>${list[i]}</h3>
+            <p>${sport.toUpperCase()}</p>
+            <p>${course.toUpperCase()}</p>
+        </div>
+        `;
+    }
+
+    container.style.display="grid";
+}
+
+</script>
+
+</body>
+</html>
